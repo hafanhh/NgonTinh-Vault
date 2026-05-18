@@ -47,4 +47,4 @@ class Story(BaseModel):
     @property
     def is_finished(self) -> bool:
         '''True if the story is marked as complete'''
-        return self.staus == ReadingStatus.COMPLETED
+        return self.status == ReadingStatus.COMPLETED
