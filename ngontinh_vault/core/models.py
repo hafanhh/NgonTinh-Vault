@@ -48,3 +48,6 @@ class Story(BaseModel):
     def is_finished(self) -> bool:
         '''True if the story is marked as complete'''
         return self.status == ReadingStatus.COMPLETED
+    
+class Config:
+    json_dencoders = {datetime: lambda v: v.isoformat()}
